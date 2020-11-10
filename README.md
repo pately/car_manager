@@ -71,7 +71,7 @@ API docs (Swagger UI) available on http://0.0.0.0:3000/docs
 prepare:
 
 ```
-docker-compose up
+docker-compose build
 ```
 Then the application can be started:
 
