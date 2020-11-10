@@ -16,17 +16,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - name: Set Environment Variables
-        run: |
-          echo ::set-env name=version::$(node --print --eval "require('./package.json').version")
-          echo ::set-env name=git-hash::$(git rev-parse --short HEAD)
-          echo ::set-env name=git-org::'pately'
-          echo ::set-env name=repo-name::'car_manager'
       - name: Build Docker Image
         run: |
           docker-compose build
-        env:
-          IMAGE_TAG: ${{env.version}}-${{env.git-hash}}
       - name: Run tests
         run: |
           docker-compose run car_manager_api npm test
