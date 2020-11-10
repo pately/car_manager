@@ -1,0 +1,29 @@
+get:
+  tags:
+   - api
+  summary: Get list of all cars.
+  description: |
+      Get list of all cars.
+  operationId: getCars
+  parameters:
+    - in: header
+      name: x-api-key
+      description: x-api-key header based authentication
+      schema:
+        type: string
+      required: true
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: "./../responses/getCars.yaml"
+    "400":
+      description: Bad Request
+    "403":
+      description: Forbidden
+    "404":
+      description: Not Found
+    "500":
+      description: Internal Server Error

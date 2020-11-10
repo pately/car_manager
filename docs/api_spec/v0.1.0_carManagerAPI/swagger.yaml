@@ -1,0 +1,40 @@
+openapi: "3.0.0"
+info:
+  version: "0.1.0"
+  title: Car Manager API
+  description: |
+      # Purpose of the Car Manager API
+
+        - This RESTful API allows perform following functions:
+          - Create a new car.
+          - Read meta-data of all cars in the system. This endpoint only return meta-data - there is no pagination required.
+          - Read the full data of an individual car.
+          - Delete an individual car.
+          - Update single properties of a single car (not a full replace operation!)
+
+      ### Changelog
+
+      #### 0.1.0
+        -  ```GET /cars/```
+        -  ```POST /car/```
+        -  ```GET /car/:id```
+        -  ```PUT /car/:id```
+        -  ```DELETE /car/:id```
+
+      ### Car Manager API information
+      consumes:
+        - application/json
+      produces:
+        - application/json
+
+#PATHS
+paths:
+
+## Car
+  /car:
+    $ref: "./definitions/paths/car.yaml"
+  /cars:
+    $ref: "./definitions/paths/cars.yaml"
+  /car/{id}:
+    $ref: "./definitions/paths/carById.yaml"
+

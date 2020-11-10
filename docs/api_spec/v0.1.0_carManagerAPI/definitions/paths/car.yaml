@@ -1,0 +1,30 @@
+post:
+  tags:
+   - api
+  summary: Create a new car.
+  description: |
+      Create a new car..
+  operationId: postCar
+  parameters:
+    - in: header
+      name: x-api-key
+      description: x-api-key header based authentication
+      schema:
+        type: string
+      required: true
+  requestBody:
+    x-name: body
+    required: false
+    content:
+      application/json:
+        schema:
+          $ref: "./../requests/postCarPayload.yaml"
+  responses:
+    "201":
+      description: Created
+    "400":
+      description: Bad Request
+    "403":
+      description: Forbidden
+    "500":
+      description: Internal Server Error

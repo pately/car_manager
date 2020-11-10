@@ -1,0 +1,5 @@
+node_modules
+.github
+dist
+k8s
+docker-compose.yml

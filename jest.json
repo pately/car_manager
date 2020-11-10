@@ -1,0 +1,18 @@
+{
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "./tsconfig.json"
+    }
+  },
+  "testEnvironment": "node",
+  "testRegex": "./tests/.*\\.(unit|integration)\\.ts",
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json",
+    "node"
+  ],
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  }
+}

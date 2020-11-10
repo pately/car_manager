@@ -1,0 +1,114 @@
+get:
+  tags:
+   - api
+  summary: Get Car By Id.
+  description: |
+      Get Car By Id.
+  operationId: getCarById
+  parameters:
+    - in: header
+      name: x-api-key
+      description: x-api-key header based authentication
+      schema:
+        type: string
+      required: true
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: number
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: "./../responses/getCar.yaml"
+    "400":
+      description: Bad Request
+    "403":
+      description: Forbidden
+    "404":
+      description: Not Found
+    "500":
+      description: Internal Server Error
+
+put:
+  tags:
+   - api
+  summary: Update Car By Id.
+  description: |
+      Update Car By Id.
+  operationId: updateCarById
+  parameters:
+    - in: header
+      name: x-api-key
+      description: x-api-key header based authentication
+      schema:
+        type: string
+      required: true
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: number
+    - in: query
+      name: property_name
+      schema:
+        type: string
+        enum: [brand, color, model]
+        example: brand 
+        minLength: 1
+      required: true
+    - in: query
+      name: property_value
+      schema:
+        type: string
+        example: brand 
+        minLength: 1
+      required: true
+  responses:
+    "204":
+      description: No Content
+    "400":
+      description: Bad Request
+    "403":
+      description: Forbidden
+    "404":
+      description: Not Found
+    "500":
+      description: Internal Server Error
+
+delete:
+  tags:
+   - api
+  summary: Delete Car By Id.
+  description: |
+      Delete Car By Id.
+  operationId: deleteCarById
+  parameters:
+    - in: header
+      name: x-api-key
+      description: x-api-key header based authentication
+      schema:
+        type: string
+      required: true
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: number
+  responses:
+    "204":
+      description: No Content
+    "400":
+      description: Bad Request
+    "403":
+      description: Forbidden
+    "404":
+      description: Not Found
+    "500":
+      description: Internal Server Error

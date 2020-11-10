@@ -1,0 +1,22 @@
+description: ""
+type: "object"
+properties:
+  brand:
+    type: "string"
+    minLength: 1
+  color:
+    type: "string"
+    minLength: 1
+  model:
+    type: "string"
+    minLength: 1
+
+required:
+  - brand
+  - color
+  - model
+additionalProperties: false
+example:
+  brand: "VW"
+  color: "red"
+  model: "Polo"

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CarManagerAPI",
+  "description": "This schema is for validation of POST car request body",
+  "type": "object",
+  "properties": {
+    "brand": {
+      "description": "The car brand",
+      "type": "string",
+      "minLength": 1
+    },
+    "color": {
+      "description": "The car color",
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "description": "The car model",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "brand",
+    "color",
+    "model"
+  ],
+  "additionalProperties": false
+}

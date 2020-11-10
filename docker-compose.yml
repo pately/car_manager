@@ -1,0 +1,16 @@
+version: "3"
+services:
+  car_manager_api:
+    image: car_manager:0.1.0
+    build:
+      context: .
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/cars
+    ports:
+    - "3000:3000"
+    depends_on:
+    - mongo
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"

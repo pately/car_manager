@@ -1,0 +1,27 @@
+description: ""
+type: "object"
+properties:
+  id:
+    type: "string"
+    minLength: 1
+  brand:
+    type: "string"
+    minLength: 1
+  color:
+    type: "string"
+    minLength: 1
+  model:
+    type: "string"
+    minLength: 1
+
+required:
+  - id
+  - brand
+  - color
+  - model
+
+example:
+  id: "1604924817973"
+  brand: VW
+  color: red
+  model: Polo
