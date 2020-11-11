@@ -83,7 +83,7 @@ describe('the updateCarById route', () => {
   });
 
   it('should fail updateCarById request with invalid property_name', async () => {
-    const id = '12345'; // invalid id only number allowed
+    const id = 12345; 
     const apiKey = 'fakeapikey';
     const response: supertest.Response = await restRequest
       .put(`/car/${id}?property_name=${'FAKE'}&property_value=${'VW'}`)
@@ -93,7 +93,7 @@ describe('the updateCarById route', () => {
   });
 
   it('should fail updateCarById request with empty property_name', async () => {
-    const id = '12345'; // invalid id only number allowed
+    const id = 12345; 
     const apiKey = 'fakeapikey';
     const response: supertest.Response = await restRequest
       .put(`/car/${id}?property_name=${''}&property_value=${'VW'}`)
@@ -103,7 +103,7 @@ describe('the updateCarById route', () => {
   });
 
   it('should fail updateCarById request with invalid property_value', async () => {
-    const id = '12345'; // invalid id only number allowed
+    const id = 12345; 
     const apiKey = 'fakeapikey';
     const response: supertest.Response = await restRequest
       .put(`/car/${id}?property_name=${'brand'}&property_value=${''}`)
