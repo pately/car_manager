@@ -7,7 +7,7 @@
    * **GET /cars** - Read meta-data of all cars in the system. This endpoint only return meta-data - there is no pagination required.
    * **GET /car/:id** - Read the full data of an individual car.
    * **DELETE /car/:id** - Delete an individual car.
-   * **PUT /car/:id?property_name={name}&property_value={value}** - Update single properties of a single car (not a full replace operation!). property_name can be any one value from the enum *[brand, color, model]*
+   * **PUT /car/:id?property_name={name}&property_value={value}** - Update single properties of a single car (not a full replace operation!). property_name can be any one value from the enum *[brand, color, model, license, vin]*
 
 
     GET /cars

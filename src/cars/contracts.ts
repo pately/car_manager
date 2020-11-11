@@ -18,6 +18,8 @@ export type Car = {
   brand: string;
   color: string;
   model: string;
+  license: string;
+  vin: string;
 }
 
 export type PostCarRequest = {
@@ -25,6 +27,8 @@ export type PostCarRequest = {
   brand: string;
   color: string;
   model: string;
+  license: string;
+  vin: string;
 }
 
 export type GetCarsResponse = {
@@ -32,6 +36,8 @@ export type GetCarsResponse = {
   brand: string;
   color: string;
   model: string;
+  license: string;
+  vin: string;
 }
 
 

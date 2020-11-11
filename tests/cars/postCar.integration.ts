@@ -16,6 +16,8 @@ describe('the postCar route', () => {
       brand: 'BMW',
       color: 'gold',
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     const response: supertest.Response = await restRequest
       .post('/car')
@@ -32,6 +34,8 @@ describe('the postCar route', () => {
       brand: 'BMW',
       color: 'gold',
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     const response: supertest.Response = await restRequest
       .post('/car')
@@ -44,9 +48,11 @@ describe('the postCar route', () => {
 
   it('should fail postCar request with invalid in body', async () => {
     const apiKey = '';
-    const carPayload = {  // model is remove from body
+    const carPayload = {  // model is removed from body
       brand: 'BMW',
       color: 'gold',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     const response: supertest.Response = await restRequest
       .post('/car')
@@ -63,6 +69,8 @@ describe('the postCar route', () => {
       brand: 'BMW',
       color: '', // empty values not allowed
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     const response: supertest.Response = await restRequest
       .post('/car')
@@ -79,7 +87,9 @@ describe('the postCar route', () => {
       brand: 'BMW',
       color: 'red', 
       model: 'BMW X5',
-      license: 'BWE 231', // extra properties not allowed
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
+      extra: 'BWE 231', // extra properties not allowed
     };
     const response: supertest.Response = await restRequest
       .post('/car')

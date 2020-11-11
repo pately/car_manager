@@ -10,13 +10,23 @@ properties:
   model:
     type: "string"
     minLength: 1
+  license:
+    type: "string"
+    minLength: 1
+  vin:
+    type: "string"
+    minLength: 1
 
 required:
   - brand
   - color
   - model
+  - license
+  - vin
 additionalProperties: false
 example:
   brand: "VW"
   color: "red"
   model: "Polo"
+  license: "BLE 231"
+  vin: "5GZCZ43D13S812715"

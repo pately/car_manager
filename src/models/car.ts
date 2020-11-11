@@ -8,6 +8,8 @@ export interface CarInterface {
   brand: string;
   color: string;
   model: string;
+  license: string;
+  vin: string;
 }
 
 set('useNewUrlParser', true);
@@ -25,7 +27,9 @@ const CarSchema: Schema = new Schema({
   id: { type: String, unique: true, index: true, required: true },
   brand: { type: String, required: true },
   color: { type: String, required: true },
-  model: { type: String, required: true }
+  model: { type: String, required: true },
+  license: { type: String, required: true },
+  vin: { type: String, required: true },
 });
 
 type CarType = CarInterface & Document;

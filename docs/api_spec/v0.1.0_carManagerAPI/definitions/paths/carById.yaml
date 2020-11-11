@@ -58,7 +58,7 @@ put:
       name: property_name
       schema:
         type: string
-        enum: [brand, color, model]
+        enum: [brand, color, model, license, vin]
         example: brand 
         minLength: 1
       required: true

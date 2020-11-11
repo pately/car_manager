@@ -18,12 +18,24 @@
       "description": "The car model",
       "type": "string",
       "minLength": 1
+    },
+    "license": {
+      "description": "The car license plate",
+      "type": "string",
+      "minLength": 1
+    },
+    "vin": {
+      "description": "The car vin",
+      "type": "string",
+      "minLength": 1
     }
   },
   "required": [
     "brand",
     "color",
-    "model"
+    "model",
+    "license",
+    "vin"
   ],
   "additionalProperties": false
 }

@@ -15,6 +15,8 @@ describe('the getCars route', () => {
       brand: 'BMW',
       color: 'gold',
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     await restRequest
       .post('/car')

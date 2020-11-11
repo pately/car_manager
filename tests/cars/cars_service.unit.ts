@@ -35,6 +35,8 @@ describe.only('CarsService', () => {
       brand: 'BMW',
       color: 'gold',
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
 
     await service.postCar(apiKey, carPayload);
@@ -47,6 +49,8 @@ describe.only('CarsService', () => {
       brand: 'BMW',
       color: 'gold',
       model: 'BMW X5',
+      license: 'BLE 231',
+      vin: '5GZCZ43D13S812715',
     };
     await expect(service.postCar(apiKey, carPayload))
       .rejects
@@ -61,6 +65,8 @@ describe.only('CarsService', () => {
         brand: 'BMW',
         color: 'gold',
         model: 'BMW X5',
+        license: 'BLE 231',
+        vin: '5GZCZ43D13S812715',
       }
     ]
 
